@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
-import { getProducts } from "../services/productService";
+import { getProducts, getProductImageUrl } from "../services/productService";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 
@@ -37,7 +37,7 @@ const Computers = () => {
           products.map((product) => (
             <div key={product.id} className="product-card">
               <img
-                src={`http://localhost:8080/api/products/images/${product.imagePath}`}
+                src={getProductImageUrl(product.imagePath)}
                 alt={product.name}
               />
               <h4>{product.name}</h4>

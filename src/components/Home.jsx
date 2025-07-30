@@ -1,28 +1,31 @@
 import React from 'react'
 
 const Home = () => {
+  // Get the base URL for GitHub Pages
+  const baseUrl = import.meta.env.BASE_URL || '/';
+
   return (
     <div class="grid-layout">
 
         <div class="product">
-            <img src="rose.jpg" alt="Product 1" />
-            <h4>Product 1</h4>
-            <p>$10.00</p>
+            <img src={`${baseUrl}computers.jpeg`} alt="Computer" />
+            <h4>Gaming Computer</h4>
+            <p>$999.00</p>
             </div>
           <div class="product">
-            <img src="rose.jpg" alt="Product 1" />
-            <h4>Product 2</h4>
-            <p>$10.00</p>
+            <img src={`${baseUrl}mobiles.jpeg`} alt="Mobile Phone" />
+            <h4>Smartphone</h4>
+            <p>$599.00</p>
             </div>
           <div class="product">
-            <img src="rose.jpg" alt="Product 1" />
-            <h4>Product 3</h4>
-            <p>$10.00</p>
+            <img src={`${baseUrl}laptops.jpeg`} alt="Laptop" />
+            <h4>Premium Laptop</h4>
+            <p>$799.00</p>
             </div>
           <div class="product">
-            <img src="rose.jpg" alt="Product 1" />
-            <h4>Product 4</h4>
-            <p>$10.00</p>
+            <img src={`${baseUrl}accessories.jpg`} alt="Accessories" />
+            <h4>USB Drive</h4>
+            <p>$29.00</p>
             </div>
     </div>
   )
